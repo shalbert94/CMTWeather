@@ -1,0 +1,199 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shalom.cmtweather.fragment.CurrentWeatherFragment">
+
+    <TextView
+        android:id="@+id/current_temp_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="10° C" />
+
+    <TextView
+        android:id="@+id/cloud_cover_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_temp_textview"
+        tools:text="Cloudy" />
+
+    <TextView
+        android:id="@+id/feels_like_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cloud_cover_textview"
+        tools:text="Feels like 9°" />
+
+    <ImageView
+        android:id="@+id/humidity_icon_imageview"
+        android:layout_width="27dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feels_like_temp"
+        tools:src="@drawable/water_drop" />
+
+    <TextView
+        android:id="@+id/humidity_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/humidity_icon_imageview"
+        app:layout_constraintStart_toEndOf="@+id/humidity_icon_imageview"
+        app:layout_constraintTop_toTopOf="@+id/humidity_icon_imageview"
+        tools:text="40%" />
+
+    <ImageView
+        android:id="@+id/wind_icon_imageview"
+        android:layout_width="28dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_icon_imageview"
+        tools:src="@drawable/flag" />
+
+    <TextView
+        android:id="@+id/wind_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/wind_icon_imageview"
+        app:layout_constraintStart_toEndOf="@+id/wind_icon_imageview"
+        app:layout_constraintTop_toTopOf="@+id/wind_icon_imageview"
+        tools:text="W 5 m/s" />
+
+    <TextView
+        android:id="@+id/title_five_day_forcast_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/title_five_day_forcast_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wind_icon_imageview"
+        tools:text="5 days" />
+
+    <TextView
+        android:id="@+id/in_one_days_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_five_day_forcast_textview"
+        tools:text="Mon" />
+
+    <TextView
+        android:id="@+id/in_one_days_temp_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/in_one_days_name_textview"
+        app:layout_constraintStart_toStartOf="@+id/in_one_days_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/in_one_days_name_textview"
+        tools:text="4°" />
+
+    <TextView
+        android:id="@+id/in_two_days_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/in_three_days_name_textview"
+        app:layout_constraintStart_toEndOf="@+id/in_one_days_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/title_five_day_forcast_textview"
+        tools:text="Tue" />
+
+    <TextView
+        android:id="@+id/in_two_days_temp_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/in_two_days_name_textview"
+        app:layout_constraintStart_toStartOf="@+id/in_two_days_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/in_two_days_name_textview"
+        tools:text="19°" />
+
+    <TextView
+        android:id="@+id/in_three_days_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_five_day_forcast_textview"
+        tools:text="Wed" />
+
+    <TextView
+        android:id="@+id/in_three_days_temp_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/in_three_days_name_textview"
+        app:layout_constraintStart_toStartOf="@+id/in_three_days_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/in_three_days_name_textview"
+        tools:text="1°" />
+
+    <TextView
+        android:id="@+id/in_four_days_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/in_five_days_name_textview"
+        app:layout_constraintStart_toEndOf="@+id/in_three_days_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/title_five_day_forcast_textview"
+        tools:text="Thu" />
+
+    <TextView
+        android:id="@+id/in_four_days_temp_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/in_four_days_name_textview"
+        app:layout_constraintStart_toStartOf="@+id/in_four_days_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/in_four_days_name_textview"
+        tools:text="-19°" />
+
+    <TextView
+        android:id="@+id/in_five_days_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_five_day_forcast_textview"
+        tools:text="Fri" />
+
+    <TextView
+        android:id="@+id/in_five_days_temp_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/in_five_days_name_textview"
+        app:layout_constraintStart_toStartOf="@+id/in_five_days_name_textview"
+        app:layout_constraintTop_toBottomOf="@+id/in_five_days_name_textview"
+        tools:text="-9°" />
+
+
+
+</android.support.constraint.ConstraintLayout>
