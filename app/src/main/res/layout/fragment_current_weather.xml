@@ -43,7 +43,7 @@
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/feels_like_temp"
-        tools:src="@drawable/water_drop" />
+        android:src="@drawable/water_drop" />
 
     <TextView
         android:id="@+id/humidity_textview"
@@ -64,7 +64,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humidity_icon_imageview"
-        tools:src="@drawable/flag" />
+        android:src="@drawable/flag" />
 
     <TextView
         android:id="@+id/wind_textview"
@@ -84,10 +84,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/title_five_day_forcast_background"
+        android:text="5 days"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wind_icon_imageview"
-        tools:text="5 days" />
+        app:layout_constraintTop_toBottomOf="@+id/wind_icon_imageview" />
 
     <TextView
         android:id="@+id/in_one_days_name_textview"
@@ -107,7 +107,7 @@
         app:layout_constraintEnd_toEndOf="@+id/in_one_days_name_textview"
         app:layout_constraintStart_toStartOf="@+id/in_one_days_name_textview"
         app:layout_constraintTop_toBottomOf="@+id/in_one_days_name_textview"
-        tools:text="4°" />
+        tools:text="4°/17°" />
 
     <TextView
         android:id="@+id/in_two_days_name_textview"
@@ -129,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="@+id/in_two_days_name_textview"
         app:layout_constraintStart_toStartOf="@+id/in_two_days_name_textview"
         app:layout_constraintTop_toBottomOf="@+id/in_two_days_name_textview"
-        tools:text="19°" />
+        tools:text="19°/27°" />
 
     <TextView
         android:id="@+id/in_three_days_name_textview"
@@ -151,7 +151,7 @@
         app:layout_constraintEnd_toEndOf="@+id/in_three_days_name_textview"
         app:layout_constraintStart_toStartOf="@+id/in_three_days_name_textview"
         app:layout_constraintTop_toBottomOf="@+id/in_three_days_name_textview"
-        tools:text="1°" />
+        tools:text="1°/9°" />
 
     <TextView
         android:id="@+id/in_four_days_name_textview"
@@ -172,7 +172,7 @@
         app:layout_constraintEnd_toEndOf="@+id/in_four_days_name_textview"
         app:layout_constraintStart_toStartOf="@+id/in_four_days_name_textview"
         app:layout_constraintTop_toBottomOf="@+id/in_four_days_name_textview"
-        tools:text="-19°" />
+        tools:text="-19°/-2°" />
 
     <TextView
         android:id="@+id/in_five_days_name_textview"
@@ -192,7 +192,7 @@
         app:layout_constraintEnd_toEndOf="@+id/in_five_days_name_textview"
         app:layout_constraintStart_toStartOf="@+id/in_five_days_name_textview"
         app:layout_constraintTop_toBottomOf="@+id/in_five_days_name_textview"
-        tools:text="-9°" />
+        tools:text="-9°/0°" />
 
 
 

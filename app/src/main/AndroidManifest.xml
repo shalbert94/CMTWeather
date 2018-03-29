@@ -3,6 +3,7 @@
     package="com.example.shalom.cmtweather">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -18,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAl5L1Y0C_k7jF4L03jYUW21_5W8Ct27_Y"/>
     </application>
 
 </manifest>
