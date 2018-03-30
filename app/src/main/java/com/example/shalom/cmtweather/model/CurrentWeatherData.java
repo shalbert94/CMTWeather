@@ -1,13 +1,8 @@
 package com.example.shalom.cmtweather.model;
 
-import android.util.Log;
-
-import com.example.shalom.cmtweather.fragment.CurrentWeatherFragment;
-import com.johnhiott.darkskyandroidlib.models.DataBlock;
 import com.johnhiott.darkskyandroidlib.models.DataPoint;
 import com.johnhiott.darkskyandroidlib.models.WeatherResponse;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -20,7 +15,7 @@ public class CurrentWeatherData {
     public static final String LOG_TAG = CurrentWeatherData.class.getSimpleName();
 
     private String currentTemp;
-    private String cloudCover;
+    private String weatherSummary;
     private String apparentTemp;
     private String humidity;
     private String wind;
@@ -50,7 +45,7 @@ public class CurrentWeatherData {
         int roundedCurrentTemp = (int) Math.round(currentWeather.getTemperature());
         currentTemp = roundedCurrentTemp + "° F";
 
-        setCloudCover(currentWeather.getCloudClover());
+        weatherSummary = currentWeather.getSummary();
 
         int roundedApparentTemp = (int) Math.round(currentWeather.getApparentTemperature());
         apparentTemp = "Feels like " + roundedApparentTemp + "°";
@@ -60,25 +55,6 @@ public class CurrentWeatherData {
         setWind(currentWeather.getWindBearing(), currentWeather.getWindSpeed());
 
         createProjectedWeatherInstances(dailyWeather);
-    }
-
-    /**
-     * Create a description for different cloud coverage percentages
-     * @param currentCloudCoverage defines what percentage of the sky is covered with clouds
-     */
-    private void setCloudCover(String currentCloudCoverage) {
-        double cloudCoverDouble = Double.valueOf(currentCloudCoverage);
-
-        if (cloudCoverDouble < .1) {
-            cloudCover = "Clear skies";
-        } else if (cloudCoverDouble >= 0.1 && cloudCoverDouble < 0.5) {
-            cloudCover = "Scattered clouds";
-        } else if (cloudCoverDouble >= 0.5 && cloudCoverDouble < 0.9) {
-            cloudCover = "Cloudy";
-        } else {
-            cloudCover = "Overcast";
-        }
-
     }
 
     /**
@@ -209,8 +185,8 @@ public class CurrentWeatherData {
         return currentTemp;
     }
 
-    public String getCloudCover() {
-        return cloudCover;
+    public String getWeatherSummary() {
+        return weatherSummary;
     }
 
     public String getApparentTemp() {

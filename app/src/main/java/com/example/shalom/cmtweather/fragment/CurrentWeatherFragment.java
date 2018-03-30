@@ -67,7 +67,7 @@ public class CurrentWeatherFragment extends Fragment {
     /*Instantiate Fragment's views*/
     private View view;
     private TextView currentTempTextView;
-    private TextView cloudCoverTextView;
+    private TextView weatherSummaryTextView;
     private TextView apparentTempTextView;
     private TextView humidityTextView;
     private TextView windTextView;
@@ -248,7 +248,7 @@ public class CurrentWeatherFragment extends Fragment {
     /*Initializes all Views that display data from the {@code WeatherResponse}*/
     private void initializeViews() {
         currentTempTextView = view.findViewById(R.id.current_temp_textview);
-        cloudCoverTextView = view.findViewById(R.id.cloud_cover_textview);
+        weatherSummaryTextView = view.findViewById(R.id.weather_summary_textview);
         apparentTempTextView = view.findViewById(R.id.feels_like_temp);
         humidityTextView = view.findViewById(R.id.humidity_textview);
         windTextView = view.findViewById(R.id.wind_textview);
@@ -270,7 +270,7 @@ public class CurrentWeatherFragment extends Fragment {
      */
     private void setViewDisplays(CurrentWeatherData currentWeatherData) {
         currentTempTextView.setText(currentWeatherData.getCurrentTemp());
-        cloudCoverTextView.setText(currentWeatherData.getCloudCover());
+        weatherSummaryTextView.setText(currentWeatherData.getWeatherSummary());
         apparentTempTextView.setText(currentWeatherData.getApparentTemp());
         humidityTextView.setText(currentWeatherData.getHumidity());
         windTextView.setText(currentWeatherData.getWind());

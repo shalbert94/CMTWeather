@@ -16,7 +16,7 @@
         tools:text="10° C" />
 
     <TextView
-        android:id="@+id/cloud_cover_textview"
+        android:id="@+id/weather_summary_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -32,7 +32,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cloud_cover_textview"
+        app:layout_constraintTop_toBottomOf="@+id/weather_summary_textview"
         tools:text="Feels like 9°" />
 
     <ImageView
