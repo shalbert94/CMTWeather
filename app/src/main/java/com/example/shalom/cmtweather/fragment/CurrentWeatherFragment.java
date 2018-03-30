@@ -19,6 +19,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -182,6 +183,9 @@ public class CurrentWeatherFragment extends Fragment {
      * After networking delivers a successful response, views are updates.
      */
     public void updateWeatherReport() {
+        final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+        progressBar.setVisibility(View.VISIBLE);
+
         /*Preparation for making API request*/
         ForecastApi.create(API_KEY);
 
@@ -207,12 +211,14 @@ public class CurrentWeatherFragment extends Fragment {
                 currentWeatherData.build();
                 /*Using the data in {@code currentWeatherData} set the displays for all views*/
                 setViewDisplays(currentWeatherData);
+                progressBar.setVisibility(View.GONE);
             }
 
             /*Handles failed request*/
             @Override
             public void failure(RetrofitError error) {
                 Log.e(LOG_TAG, "RetrofitError: " + error.toString());
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
